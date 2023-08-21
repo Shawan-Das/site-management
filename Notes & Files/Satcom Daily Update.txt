@@ -1,0 +1,66 @@
+sJCLzCbfoP
+**** 01-08-23(Day-1) ****
+-Topic:Angular CLI-
+> problem with intalling Angular(solved)
+> following a youtube tutoria (22/26)video
+https://www.youtube.com/watch?v=hHQLgkQZe1o&list=PL6n9fhu94yhWUcq5Pc16uf8YKXoZ87Vh_&index=22
+> Completed upto Angular tslint rules.
+> Reading doccument [complete]
+
+**** 02-08-23(Day-2) ****
+> TypeScript Doc
+> TypeScript Videos
+  link: https://www.youtube.com/watch?v=Vrzn-QRhasU&list=PLHiZ4m8vCp9PgOOjdyNpc6AoBmKNrp_u3&index=15
+
+> Due Angular tutorial
+> Due Databse
+
+
+**** 03-08-23(Day-3) ****
+>REST API(Methods)
+
+**** 06-08-23(Day-4) ****
+> Connect Database
+> Set query
+> Pass data from Database to FrontEnd
+> Edit,Delete,Add data.
+
+**** 07-08-23(Day-5) ****
+> PostgreSql
+> PostMan
+> error with connecting database to dotNet
+
+**** 08-08-23(Day-6) ****
+> connection with database
+> PostMan REST API
+> Multiple table manage
+
+**** 09-08-23(Day-7) ****
+**** 10-08-23(Day-8) ****
+**** 13-08-23(Day-9) ****
+**** 14-08-23(Day-10) ****
+**** 16-08-23(Day-11) ****
+**** 17-08-23(Day-12) ****
+**** 20-08-23(Day-13) ****
+[Work Summary]
+> Docar
+> CRUD with entity framework
+> postman: 
+	> From-data
+	> x-www-form-unclea..
+	> Bearer token/ JWT token
+	> Accept
+	> Status Codes
+
+[completed]
+> Docar
+**** 21-08-23(Day-14) ****
+**** 22-08-23(Day-15) ****
+**** 23-08-23(Day-16) ****
+**** 24-08-23(Day-17) ****
+**** 27-08-23(Day-18) ****
+**** 28-08-23(Day-19) ****
+**** 29-08-23(Day-20) ****
+**** 30-08-23(Day-21) ****
+**** 31-08-23(Day-22) ****
+> 3rd party api

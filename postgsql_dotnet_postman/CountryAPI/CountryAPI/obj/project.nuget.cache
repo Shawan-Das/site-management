@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "fB6e7aCxP6flBj39e1LvgCGoiSafqJtMuUVz8gSOJUjQNG7NV/rFk1zLeHhr8TE2stWWxMSnBgGeB0PPTJWRhw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Marani\\Downloads\\dotNet\\postgsql_dotnet_postman\\CountryAPI\\CountryAPI\\CountryAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Marani\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\Marani\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Marani\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\Marani\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\Marani\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\Marani\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

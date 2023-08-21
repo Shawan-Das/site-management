@@ -1,0 +1,26 @@
+**** 2XX **** -> Success Codes
+> 200 Success
+> 201 Created
+> 202 accepted
+> 204 No content
+
+**** 2xx **** -> Redirection
+> 301 moved permanently
+> 302 Found
+> 304 not modified
+> 307 temp redirect  _302
+> 308 _301
+
+**** 4xx **** -> client error
+> 400 bad request
+> 401 unauthorized
+> 403 forbidden
+> 404 not found
+> 410 gone
+> 411 length required
+> 429 to many request
+
+**** 5xx **** -> Server Error
+> 500 internal server error
+> 502 bad getway
+> 503 service unavailable

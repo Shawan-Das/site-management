@@ -1,0 +1,66 @@
+﻿@page
+@model MyStore.Pages.Clients.CreateModel
+@{
+}
+<br>
+<h2> New Client</h2>
+
+@if(Model.errorMessage.Length > 0)
+{
+	<div class="alert alert-warning alert-dismissible fade show" role="alert">
+		<strong>@Model.errorMessage</strong>
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+}
+
+
+<form method="POST">
+	<div class="row mb-3">
+		<lale class="col-sm-3 col-from-lable"> Name </lale>
+		<div class="col-sm-6">
+			<input type="text" class="from-sontrol" name="name" value="@Model.clientInfo.name">
+		</div>
+	</div>
+
+	<div class="row mb-3">
+		<lale class="col-sm-3 col-from-lable"> email </lale>
+		<div class="col-sm-6">
+			<input type="text" class="from-sontrol" name="email" value="@Model.clientInfo.email">
+		</div>
+	</div>
+
+	<div class="row mb-3">
+		<lale class="col-sm-3 col-from-lable"> phone number </lale>
+		<div class="col-sm-6">
+			<input type="text" class="from-sontrol" name="phone" value="@Model.clientInfo.phone">
+		</div>
+	</div>
+
+	<div class="row mb-3">
+		<lale class="col-sm-3 col-from-lable"> Address </lale>
+		<div class="col-sm-6">
+			<input type="text" class="from-sontrol" name="address" value="@Model.clientInfo.address">
+		</div>
+	</div>
+
+	@if(Model.successMessage.Length > 0)
+	{
+		<div calss="roe mb-3">
+			<div class="col-sm-9">
+				<div class="alert alert-warning alert-dismissible fade show" role="alert">
+					<strong>@Model.successMessage</strong>
+					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>
+			</div>
+		</div>
+	}
+
+	<div class="row mb-3">
+		<div class="offset-sm-3 col-sm-3 d-grid">
+			<button type="submit" class=" btn btn-primary">Submit</button>
+		</div>
+		<div class="col-sm-3 d-grid">
+			<a class=" btn btn-outline-primary" href="/" role="button">Cancel</a>
+		</div>
+	</div>
+</form>
