@@ -3,3 +3,7 @@
 [FromRoute] attribute -> take attribute from route
 
 [FromForm] attribute -> take data from [from-data] section
+
+[FromBody] attribute -> fetch data from body, need to specify every data to pass
+
+[]
