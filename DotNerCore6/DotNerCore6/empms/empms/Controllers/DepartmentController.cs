@@ -32,7 +32,7 @@ namespace empms.Controllers
         // Get By ID
 
         [HttpGet("get")]    // Search by localhost/api/department/{id}
-		public async Task<ActionResult<Department>> Department([FromBody] Department dept)
+		public async Task<ActionResult<Department>> Department([FromForm] Department dept)
 
         {
             try
@@ -55,7 +55,7 @@ namespace empms.Controllers
         // Update Data [PUT operation]
 
         [HttpPut("")]
-		public async Task<IActionResult> PutDepartment([FromBody] Department department)
+		public async Task<IActionResult> PutDepartment([FromForm] Department department)
 		{
 			if (!DepartmentExists(department.Id)){
 				return NotFound();
@@ -77,7 +77,7 @@ namespace empms.Controllers
         // Create Data [post operation]
 
 		[HttpPost]
-        public async Task<ActionResult<Department>> CreateDepartment([FromBody] Department department)
+        public async Task<ActionResult<Department>> CreateDepartment([FromForm] Department department)
         {
             try
             {
@@ -101,9 +101,9 @@ namespace empms.Controllers
 
 
         //Delete Data [DELETE operation]
-        [HttpDelete("")]
+        [HttpDelete()]
 		//[ValidateAntiForgeryToken]
-		public async Task<IActionResult> DeleteDepartment([FromBody] Department dept)
+		public async Task<IActionResult> DeleteDepartment([FromForm] Department dept)
 		{
 			if (dept.Id == 0) { return BadRequest("No Such Department"); }
 			try

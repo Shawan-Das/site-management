@@ -1,0 +1,5 @@
+[FromBody] attribute -> send data from body/Raw/*Select data type
+
+[FromRoute] attribute -> take attribute from route
+
+[FromForm] attribute -> take data from [from-data] section

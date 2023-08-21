@@ -30,7 +30,7 @@ namespace empms.Controllers
 		// Get By ID
 
 		[HttpGet("get")]    // Search by localhost/api/employee/{id}
-		public async Task<ActionResult<Employee>>Employee([FromBody] Employee emp)
+		public async Task<ActionResult<Employee>>Employee([FromForm] Employee emp)
 		{
 			try
 			{
@@ -49,10 +49,19 @@ namespace empms.Controllers
 			}
 		}
 
+		[HttpGet("get-by-department")]    // Search by localhost/api/employee/{id}
+		public async Task<ActionResult<IEnumerable<Employee>>> EmployeeByDepartment([FromForm] Employee emp)
+		{
+			List<Employee> employee = await _context.Employees.Where(e => e.departmentId == emp.departmentId).ToListAsync();
+
+			if (employee == null) return NotFound("No sunch Employee");
+			else return employee;
+		}
+
 		// Update Data [PUT operation]
 
 		[HttpPut("")]
-		public async Task<IActionResult> PutEmployee([FromBody] Employee employee)
+		public async Task<IActionResult> PutEmployee([FromForm] Employee employee)
 		{
 			var id=employee.Id;
 
@@ -77,7 +86,7 @@ namespace empms.Controllers
 		// Create Data [post operation]
 
 		[HttpPost]
-		public async Task<ActionResult<Department>> CreateEmployee([FromBody] Employee employee)
+		public async Task<ActionResult<Department>> CreateEmployee([FromForm] Employee employee)
 		{
 			try
 			{
@@ -99,7 +108,7 @@ namespace empms.Controllers
 		}
 
 		[HttpDelete("")]
-		public async Task<IActionResult> DeleteEmployee([FromBody] Employee emp)
+		public async Task<IActionResult> DeleteEmployee([FromForm] Employee emp)
 		{
 			try
 			{

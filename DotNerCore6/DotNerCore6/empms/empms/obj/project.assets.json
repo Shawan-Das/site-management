@@ -6609,11 +6609,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Marani\\Downloads\\dotNet\\DotNerCore6\\DotNerCore6\\empms\\empms\\empms.csproj",
+      "projectUniqueName": "C:\\Users\\Marani\\Downloads\\dotNet\\dotNetFiles\\DotNerCore6\\DotNerCore6\\empms\\empms\\empms.csproj",
       "projectName": "empms",
-      "projectPath": "C:\\Users\\Marani\\Downloads\\dotNet\\DotNerCore6\\DotNerCore6\\empms\\empms\\empms.csproj",
+      "projectPath": "C:\\Users\\Marani\\Downloads\\dotNet\\dotNetFiles\\DotNerCore6\\DotNerCore6\\empms\\empms\\empms.csproj",
       "packagesPath": "C:\\Users\\Marani\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Marani\\Downloads\\dotNet\\DotNerCore6\\DotNerCore6\\empms\\empms\\obj\\",
+      "outputPath": "C:\\Users\\Marani\\Downloads\\dotNet\\dotNetFiles\\DotNerCore6\\DotNerCore6\\empms\\empms\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Marani\\AppData\\Roaming\\NuGet\\NuGet.Config",

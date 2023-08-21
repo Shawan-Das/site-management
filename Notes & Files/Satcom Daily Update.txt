@@ -55,6 +55,8 @@ https://www.youtube.com/watch?v=hHQLgkQZe1o&list=PL6n9fhu94yhWUcq5Pc16uf8YKXoZ87
 [completed]
 > Docar
 **** 21-08-23(Day-14) ****
+> HTTP Status Codes
+> 
 **** 22-08-23(Day-15) ****
 **** 23-08-23(Day-16) ****
 **** 24-08-23(Day-17) ****

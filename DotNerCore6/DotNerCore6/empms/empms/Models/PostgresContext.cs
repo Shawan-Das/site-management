@@ -42,7 +42,6 @@ namespace empms.Models
              }
             return null;
         }
-
 		public bool EmployeeExists(int id)
 		{
 			return Employees.Any(e => e.Id == id);
@@ -51,6 +50,7 @@ namespace empms.Models
 		{
 			return Departments.Any(e => e.Id == id);
 		}
+
 
         
 	}
