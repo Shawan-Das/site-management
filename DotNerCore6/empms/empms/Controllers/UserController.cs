@@ -110,8 +110,9 @@ namespace empms.Controllers
 				new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
 				//new Claim(ClaimTypes.NameIdentifier, users.Id.ToString()),
 				new Claim(ClaimTypes.NameIdentifier, users.username),
-				new Claim("", users.email),
+				new Claim(ClaimTypes.NameIdentifier, users.email),
 				new Claim(ClaimTypes.NameIdentifier, users.password)
+				//new Claim(ClaimTypes.NameIdentifier, DateTime.Now)
             };
 				var token = new JwtSecurityToken(_config["Jwt:Issuer"],
 					_config["Jwt:Audience"],
