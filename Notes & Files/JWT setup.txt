@@ -1,0 +1,60 @@
+1) appsetting.json
+"Jwt": {
+    "Key": "MyAuthenticationCodeIs:Shan@19101020" //Set the key for token
+    //"Issuer": "https://localhost:44344", //Project Property-> Debug-> IIS-->App URL (you can local host url as well)
+    //"Audience": "https://localhost:44344"
+  },
+
+
+2) Program.cs
+using 
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options => {
+	options.TokenValidationParameters = new TokenValidationParameters
+	{
+		ValidateIssuer = true, // validate server
+		ValidateAudience = true, // valid audience
+		ValidateLifetime = true, // tokern expire
+		ValidateIssuerSigningKey = true,
+		//ValidIssuer = builder.Configuration["Jwt:Issuer"],
+		//ValidAudience = builder.Configuration["Jwt:Audience"],
+		IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])) // using the jwt key
+	};
+});
+
+app.UseAuthentication();
+
+
+3) Create user model
+
+4) Create login controller
+	private IConfiguration (inherit)
+
+5) generate token:
+private string GenerateToken(User users){
+	var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
+            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+            var claims = new[] // optional
+            {
+                new Claim(ClaimTypes.NameIdentifier,user.Username),
+                new Claim(ClaimTypes.Role,user.Role)
+		// new Claim(JwtRegisteredClaimNames.Sub, _config["Jwt:Key"]),
+		//new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+		//new Claim("UserId", _userData.userId.ToString()),
+		//new Claim("", users.username),
+		//new Claim("", users.email),
+		//new Claim("", users.password)
+            };
+            var token = new JwtSecurityToken(_config["Jwt:Issuer"],
+                _config["Jwt:Audience"],
+                claims, // could be null
+                expires: DateTime.Now.AddMinutes(15),
+                signingCredentials: credentials);
+
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
+
+}
+
+
+-- Registration --
+SecurityStamp = Guid.NewGuide().ToString()

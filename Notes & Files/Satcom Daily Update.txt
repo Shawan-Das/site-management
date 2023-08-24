@@ -54,12 +54,17 @@ https://www.youtube.com/watch?v=hHQLgkQZe1o&list=PL6n9fhu94yhWUcq5Pc16uf8YKXoZ87
 
 [completed]
 > Docar
+
 **** 21-08-23(Day-14) ****
 > HTTP Status Codes
-> 
+
 **** 22-08-23(Day-15) ****
+> Entity framework
+> Check- multiple table data transaction for insert at a time into multiple table
 **** 23-08-23(Day-16) ****
+> token generate
 **** 24-08-23(Day-17) ****
+> JWT/ Barer Token generate
 **** 27-08-23(Day-18) ****
 **** 28-08-23(Day-19) ****
 **** 29-08-23(Day-20) ****
