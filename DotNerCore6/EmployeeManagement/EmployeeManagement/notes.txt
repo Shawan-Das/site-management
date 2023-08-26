@@ -1,0 +1,45 @@
+1. database setup
+Program.cs
+// => Configure database context
+builder.Services.AddDbContext<PostgresContext>(options =>
+{
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options => {
+	options.TokenValidationParameters = new TokenValidationParameters
+	{
+		ValidateIssuer = true,
+		ValidateAudience = true,
+		ValidateLifetime = true,
+		ValidateIssuerSigningKey = true,
+		ValidIssuer = builder.Configuration["Jwt:Issuer"],
+		ValidAudience = builder.Configuration["Jwt:Audience"],
+		IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])) // using the jwt key
+	};
+});
+
+
+appsetting.json
+// => Database connection string
+  "ConnectionStrings": {
+    "DefaultConnection": "Host=localhost;port=8080;Database=empms;Username=postgres;Password=1234"
+  },
+// => jwt TOKEN setup
+  "Jwt": {
+    "Key": "MyAuthenticationCodeIs:Shan@19101020", //Set the key for token
+    "Issuer": "https://localhost:44344", //Project Property-> Debug-> IIS-->App URL (you can local host url as well)
+    "Audience": "https://localhost:44344"
+  },
+
+PostgresContext.cs
+public class PostgresContext : DbContext
+	{
+		public PostgresContext()
+		{
+		}
+		public PostgresContext(DbContextOptions<PostgresContext> options)
+		   : base(options)
+		{
+		}
+	}

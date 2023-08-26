@@ -1,0 +1,36 @@
+CREATE TABLE department (
+    department_id varchar(3) Not null  Unique PRIMARY KEY,
+    department_name VARCHAR(50) Not null Unique
+);
+
+INSERT INTO department (department_id,department_name)
+VALUES
+	('001','Admin'),
+    ('002','HR'),
+    ('101','Accounts'),
+	('201','Manager'),
+    ('301','Junior Developer'),
+	('302','Developer'),
+    ('303','Senior Developer');
+
+SELECT* from department;
+
+
+CREATE TABLE employee (
+    employee_id varchar(8) Unique not null PRIMARY KEY,
+    employee_name VARCHAR(100) not null,
+	email VARCHAR(100) not null unique,
+	phone VARCHAR(11) not null unique,
+	address VARCHAR(1000) not null,
+	departmentId varchar(3),
+	joining_year int not null,
+	status int not null default 1,
+	FOREIGN KEY(departmentId) REFERENCES department(department_id)
+);
+
+Create table Users(
+	user_name varchar(10) Unique not null,
+	email Varchar(100) unique not null,
+	password varchar (100) not null,
+	FOREIGN KEY(email) REFERENCES employee(email)
+);
