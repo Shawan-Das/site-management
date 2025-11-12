@@ -1,0 +1,41 @@
+<div class="container-fluid login-bg">
+  <div class="row justify-content-center align-items-center min-vh-100">
+    <div class="col-lg-4 col-md-6 col-sm-10">
+      <div class="card login-card shadow-lg border-0">
+        <div class="card-header text-center bg-transparent border-0 py-4">
+          <div class=" mb-3">
+            <i class="fas fa-boxes fa-3x text-primary"></i>
+          </div>
+          <h3 class="fw-semibold text-dark mb-1">Sales & Stock</h3>
+          <p class="text-muted mb-0 fs-6">Please login to continue</p>
+        </div>
+        <div class="card-body px-4 py-4">
+          <form (ngSubmit)="login()" autocomplete="on">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="username" name="username"
+                [(ngModel)]="username" required placeholder="Username"/>
+              <label for="username">
+                <i class="fa fa-user text-primary me-2"></i>Username
+              </label>
+            </div>
+            <div class="form-floating mb-4 position-relative">
+              <input [type]="showPassword ? 'text' : 'password'" class="form-control pe-5" id="password" name="password"
+                [(ngModel)]="password" required placeholder="Password" />
+              <label for="password">
+                <i class="fa fa-lock text-primary me-2"></i>Password
+              </label>
+              <button type="button" class="btn btn-link position-absolute top-50 end-0 translate-middle-y me-2 p-0 text-muted" (click)="togglePasswordVisibility()" tabindex="-1" >
+                <i [ngClass]="showPassword ? 'fa fa-eye-slash' : 'fa fa-eye'"></i>
+              </button>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg fw-semibold text-uppercase" >
+                <i class="fa fa-sign-in-alt me-2"></i>Login
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

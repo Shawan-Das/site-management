@@ -1,0 +1,307 @@
+  body {
+    background-color: #f8f9fa;
+  }
+
+  h2 {
+    color: #343a40;
+    margin-bottom: 0;
+  }
+
+  .card {
+    border-radius: 10px;
+  }
+  
+  .card-header {
+    font-weight: bold;
+    position: relative;
+  }
+
+  .back-icon {
+    position: static;
+    top: 50%;
+    right: 10px;
+    transform: translateY(0%);
+    cursor: pointer;
+    color: #007bff; /* Change this color if needed */
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    font-size: 24px; /* Increase the size */
+    background-color: rgba(255, 255, 255, 0.8); /* Add a background color */
+    padding: 5px; /* Add padding */
+    border-radius: 50%; /* Make it a circle */
+  }
+
+  .back-icon:hover {
+    color: #0056b3; /* Darker color on hover */
+    background-color: rgba(255, 255, 255, 1); /* Change background color on hover */
+  }
+
+  .selected {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  .selected:hover {
+    background-color: #0056b3;
+  }
+
+  .item-list-body, .data-table-body {
+    height: 300px;
+    overflow-y: auto;
+  }
+
+  .table-transaction, .table-transaction-total {
+    text-align: right;
+    font-size: 12px;
+  }
+
+  .table-transaction-total {
+    font-weight: bold;
+  }
+
+  .table-responsive {
+    overflow-x: auto;
+    position: relative;
+  }
+
+  /* Tooltip Styles */
+  [data-toggle="tooltip"] {
+    position: relative;
+  }
+
+  [data-toggle="tooltip"]::after {
+    content: attr(data-title);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    display: none;
+  }
+
+  [data-toggle="tooltip"]:hover::after {
+    display: block;
+  }
+
+  /* Table Styling */
+  .styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .styled-table th, .styled-table td {
+    padding: 12px 15px;
+  }
+
+  .styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+  }
+
+  .styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+
+  .styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+
+  .styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+  }
+
+  .styled-table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  .stock-list, .center-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .stock-list li, .center-list li {
+    padding: 5px 0;
+    border-bottom: 1px solid #dddddd;
+  }
+
+  .stock-list li:last-of-type, .center-list li:last-of-type {
+    border-bottom: none;
+  }
+
+  .card {
+    border-radius: 10px;
+  }
+  
+  .item-list-body, .data-table-body {
+    height: 300px;
+    overflow-y: auto;
+  }
+
+  .table-head, .table-transaction, .table-transaction-total {
+    text-align: right;
+  }
+
+  .table-transaction-total {
+    font-weight: bold;
+  }
+
+  .table-responsive {
+    overflow-x: auto;
+  }
+  .loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    backdrop-filter: blur(5px);
+  }
+  .loading-content {
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .spinner-border {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .loading-spinner {
+    text-align: center;
+    color: #007bff;
+  }
+
+/* Toggle Button Styling */
+.toggle-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(0, 123, 255, 0.2);
+  transition: all 0.4s ease;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.toggle-btn:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Arrow Icon Styling */
+.toggle-btn i.ms-2 {
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 576px) {
+  .btn {
+    font-size: 0.875rem; /* Adjust button font size for smaller screens if necessary */
+  }
+}
+  // ----------------------
+  /* Tooltip Styles */
+  /* Table Styling */
+  .back-button {
+    display: inline-flex;
+    align-items: left;
+    font-size: 16px; /* Adjust as needed */
+    cursor: pointer;
+  }
+  
+  .back-button i {
+    margin-right: 20px; /* Space between icon and text */
+  }
+  .card-body.data-table-body {
+    max-height: 650px; /* Adjust height as needed */
+    overflow-y: auto;
+  }
+  
+  .table-container {
+    position: relative;
+  }
+  
+  .table-container thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #f8f9fa; /* Background color of the header */
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
+  }
+  .back-icon {
+    margin-left: 4px; /* Adjust the spacing as needed */
+  }
+
+
+
+// ----------------------------------------------------------------
+.card-header .fa-list {
+  color: #ffffff;
+}
+
+.card-header span {
+  color: #ffffff;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f8f9fa; /* Light grey background on hover */
+}
+
+.table-hover td {
+  cursor: pointer;
+}
+
+.sticky-col th, .sticky-col td {
+  background-color: #f8f9fa;
+}
+.loading-text {
+  min-width: 100px;  /* Adjust based on your needs */
+  text-align: center;
+}
+
+.loading-dots {
+  display: inline-block;
+  width: 24px;  /* Adjust width to fit three dots */
+  text-align: left;
+}
+
+.loading-dots::after {
+  content: '.';
+  animation: dots 2s steps(4, end) infinite;
+}
+
+@keyframes dots {
+  0%, 20% { content: ''; }
+  40% { content: '.'; }
+  60% { content: '..'; }
+  80%, 100% { content: '...'; }
+}
+// cube color if needed.
+// .table-hover td i {
+//   color: #007bff; /* Icon color */
+// }

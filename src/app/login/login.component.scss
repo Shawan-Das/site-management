@@ -1,0 +1,80 @@
+.login-bg {
+  background: linear-gradient(135deg, #e3f2fd 0%, #cfd9df 100%);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.login-card {
+  border-radius: 16px;
+  background: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.login-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.icon-wrapper {
+  background: rgba(13, 110, 253, 0.1);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* Inputs */
+.form-control {
+  border-radius: 10px;
+  border: 1px solid #ced4da;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+}
+
+.form-floating > label {
+  color: #6c757d;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #007bff 0%, #0d6efd 100%);
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #0056b3 0%, #0069d9 100%);
+  transform: scale(1.02);
+}
+
+.form-check-input:checked {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+@media (max-width: 576px) {
+  .login-card {
+    margin: 1rem;
+  }
+}
+
+button.btn-link {
+  border: none;
+  outline: none;
+}
+
+button.btn-link:hover i {
+  color: #0d6efd;
+  transition: color 0.2s;
+}
+
+.form-control {
+  padding-right: 2.5rem !important; /* space for eye icon */
+}
