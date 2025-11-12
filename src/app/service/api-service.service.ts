@@ -2,13 +2,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import { Item } from '../models/item.model';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiServiceService {
-  private url = 'http://localhost:7070/'; 
-  // private url = 'http://118.67.213.45:7035/';
+  private url = environment.apiUrl;
 
   constructor(private http: HttpClient) {}
 
