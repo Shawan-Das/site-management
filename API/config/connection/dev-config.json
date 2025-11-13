@@ -1,9 +1,9 @@
 {
-	"dbhost":"db.gtfqhsjwwlzmcinusayh.supabase.co",
-	"dbPort":5432,
-	"dbname":"postgres",
-	"dbuid":"postgres",
-	"dbpassword":"rzBqING3j6nyiiXD",
+	"dbhost":"118.67.213.45",
+	"dbPort":9432,
+	"dbname":"erp",
+	"dbuid":"erpadmin",
+	"dbpassword":"admin4test",
 	"timeout": 100,
 	"connRetryCount": 1,
 	"connRetryInterval": 5000,
@@ -15,7 +15,7 @@
 		"/apidoc/index.html",
 		"/apidoc/swagger.yaml"
 	],
-	"adminEmailId":"admin@satcombd.com",
+	"adminEmailId":"admin@user.com",
 	"adminPassword":"admin4test",
 	"adminEmpCode":"0000",
 	"rptServiceLink":"http://192.168.1.151:9985/convert",
