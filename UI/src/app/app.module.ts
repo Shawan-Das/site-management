@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './auth.guard';
 import { AuthService } from './service/auth.service';
 import { FooterComponent } from './footer/footer.component';
+import { SatcomFormComponent } from './satcom-form/satcom-form.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { FooterComponent } from './footer/footer.component';
     LoginComponent,
     HomeComponent,
     FooterComponent,
+    SatcomFormComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
-import { Item } from '../models/item.model';
+import { Observable } from 'rxjs';
+import { Satcom, SatcomResponse } from '../models/satcom.model';
 import { environment } from '../../environments/environment';
 
 @Injectable({
@@ -24,28 +24,33 @@ export class ApiServiceService {
     });
   }
 
-  getItemMaster(): Observable<Item[]> {
+  // Create Satcom Data
+  createSatcom(data: Satcom): Observable<SatcomResponse> {
     const headers = this.getHeaders();
-    return this.http.get<any>(`${this.url}api/auth/users`, { headers }).pipe(
-      map((res) => res.payload),
-      map((payload) => {
-        return payload.map((item: any) => ({
-          // itemid: item.itemid,
-          // itemname: item.itemname,
-          // parent: item.parent
-        }));
-      })
-    );
+    return this.http.post<SatcomResponse>(`${this.url}api/satcom`, data, { headers });
   }
 
-  getStocks(itemid: number): Observable<any> {
+  // Get All Satcom Data
+  getCompanyList(): Observable<SatcomResponse> {
     const headers = this.getHeaders();
-    const reqBody = { itemid: itemid };
-    return this.http.post<any>(`${this.url}api/satcom`, reqBody, { headers });
+    return this.http.get<SatcomResponse>(`${this.url}api/satcom`, { headers });
   }
 
-  getSaleDetails(): Observable<any> {
+  // Get One Satcom Data
+  getOneData(id: number): Observable<SatcomResponse> {
     const headers = this.getHeaders();
-    return this.http.get<any>(`${this.url}api/satcom/2`,{ headers } );
+    return this.http.get<SatcomResponse>(`${this.url}api/satcom/${id}`, { headers });
+  }
+
+  // Update Satcom Data
+  updateSatcom(id: number, data: Satcom): Observable<SatcomResponse> {
+    const headers = this.getHeaders();
+    return this.http.put<SatcomResponse>(`${this.url}api/satcom/${id}`, data, { headers });
+  }
+
+  // Delete Satcom Data
+  deleteSatcom(id: number): Observable<SatcomResponse> {
+    const headers = this.getHeaders();
+    return this.http.delete<SatcomResponse>(`${this.url}api/satcom/${id}`, { headers });
   }
 }
