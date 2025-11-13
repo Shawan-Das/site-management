@@ -1,19 +1,17 @@
 {
-	"dbhost":"118.67.213.45",
-	"dbPort":9432,
-	"dbname":"erp",
-	"dbuid":"erpadmin",
-	"dbpassword":"admin4test",
+	"dbhost":"localhost",
+	"dbPort":5432,
+	"dbname":"postgres",
+	"dbuid":"postgres",
+	"dbpassword":"db_password",
 	"timeout": 100,
 	"connRetryCount": 1,
 	"connRetryInterval": 5000,
-	"jwtKey":"s@3j7a91j0K1jm2!3921)82",
+	"jwtKey":"your_jwt_key_here",
 	"bypassAuth":[
 		"/api/auth/create",
 		"/api/auth/login",
-		"/api/auth/resetpwd",
-		"/apidoc/index.html",
-		"/apidoc/swagger.yaml"
+		"/api/auth/resetpwd"	
 	],
 	"adminEmailId":"admin@user.com",
 	"adminPassword":"admin4test",
@@ -29,6 +27,6 @@
 	"smtp_host": "smtp.gmail.com",
 	"smtp_port": 587,
 	"url": {
-        "uiurl": "ui url"
+        "uiurl": "http://localhost:4200"
     }
 }
